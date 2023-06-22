@@ -2,7 +2,7 @@ import RenderLib from "../../../RenderLib"
 import config from "../../config"
 import { inRift } from "../../utils/Utils"
 
-const blockCoords = JSON.parse(FileLib.read("The Rift", "data/Tubulator.json"))
+const blockCoords = JSON.parse(FileLib.read("Rift", "data/Tubulator.json"))
 
 register("renderWorld", () => {
     if(!World.isLoaded() || !inRift() || !config.TubulatorSetting) return
