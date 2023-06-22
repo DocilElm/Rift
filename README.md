@@ -1,2 +1,5 @@
-# Rift
-ChatTriggers Module
+# Rift Module
+ChatTriggers Module Currently WIP
+
+# Commands
+### /rift | Opens settings menu
