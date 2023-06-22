@@ -1,0 +1,1 @@
+export const inRift = () => TabList.getNames()?.find(names => names.removeFormatting()?.match(/^Area: ([\w\d ]+)$/))?.includes("The Rift") ?? false

@@ -1,0 +1,69 @@
+import {
+    @Vigilant,
+    @SwitchProperty,
+    @SelectorProperty,
+    @ButtonProperty,
+    Color 
+} from 'Vigilance';
+
+@Vigilant("Rift", "Settings", {
+    getCategoryComparator: () => (a, b) => {
+        const categories = ["General", "DreadFarm", "Mirrorverse"];
+        return categories.indexOf(a.name) - categories.indexOf(b.name);
+    }
+})
+class Settings {
+    constructor() {
+        this.initialize(this);
+        this.setCategoryDescription("General", "DocilElm was here")
+    }
+
+    //stole this from bloom cuz i cba with dumb vigilance
+    @ButtonProperty({
+        name: "Discord Server",
+        description: "Join if you want to report a bug or want to make a suggestion",
+        category: "General",
+        placeholder: "Join"
+    })
+    MyDiscord() {
+        java.awt.Desktop.getDesktop().browse(new java.net.URI("https://discord.gg/SK9UDzquEN"))
+    }
+
+    //DreadFarm
+    
+    @SwitchProperty({
+        name: "Mushroom Timer",
+        description: "Renders the amount of time in a count down required to look at the mushroom",
+        category: "DreadFarm",
+        subcategory: "DreadFarm"
+    })
+    MushroomTimeSetting = false;
+
+    @SwitchProperty({
+        name: "Berberis ESP",
+        description: "Renders a box in which dead bush you can farm you need to have firework particles on",
+        category: "DreadFarm",
+        subcategory: "DreadFarm"
+    })
+    BerberisESPSetting = false;
+
+    //Mirrorverse
+
+    @SwitchProperty({
+        name: "Lava Maze",
+        description: "Renders a box where you can walk to complete this puzzle",
+        category: "Mirrorverse",
+        subcategory: "Mirrorverse"
+    })
+    LavaMazeSetting = false;
+
+    @SwitchProperty({
+        name: "Tubulator",
+        description: "Renders a box where you can jump to complete this puzzle",
+        category: "Mirrorverse",
+        subcategory: "Mirrorverse"
+    })
+    TubulatorSetting = false;
+}
+
+export default new Settings();
