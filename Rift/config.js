@@ -47,6 +47,14 @@ class Settings {
     })
     BerberisESPSetting = false;
 
+    @SwitchProperty({
+        name: "Wooden Buttons",
+        description: "Renders a box in each direction of the buttons and also adds numbers to each one of them",
+        category: "DreadFarm",
+        subcategory: "DreadFarm"
+    })
+    WoodenButtonsSetting = false;
+
     //Mirrorverse
 
     @SwitchProperty({
