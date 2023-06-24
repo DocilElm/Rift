@@ -8,7 +8,7 @@ import {
 
 @Vigilant("Rift", "Settings", {
     getCategoryComparator: () => (a, b) => {
-        const categories = ["General", "DreadFarm", "Mirrorverse"];
+        const categories = ["General", "DreadFarm", "Mirrorverse", "StillgoreChateau"];
         return categories.indexOf(a.name) - categories.indexOf(b.name);
     }
 })
@@ -55,6 +55,14 @@ class Settings {
     })
     WoodenButtonsSetting = false;
 
+    @SwitchProperty({
+        name: "Glyph Locations",
+        description: "Renders a text in each of the glyph locations",
+        category: "DreadFarm",
+        subcategory: "DreadFarm"
+    })
+    GlyphLocationsSetting = false;
+
     //Mirrorverse
 
     @SwitchProperty({
@@ -72,6 +80,16 @@ class Settings {
         subcategory: "Mirrorverse"
     })
     TubulatorSetting = false;
+
+    //StillgoreChateau
+
+    @SwitchProperty({
+        name: "Heart ESP",
+        description: "Renders a box for the hearts particles from Splatters",
+        category: "StillgoreChateau",
+        subcategory: "StillgoreChateau"
+    })
+    HeartESPSetting = false;
 }
 
 export default new Settings();

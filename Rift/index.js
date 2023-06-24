@@ -6,8 +6,11 @@ import Settings from "./config"
 import "./features/dreadfarm/MushroomTimer"
 import "./features/dreadfarm/BerberisESP"
 import "./features/dreadfarm/WoodenButtons"
+import "./features/dreadfarm/GlyphLocations"
 //Mirrorverse
 import "./features/mirrorverse/LavaMaze"
 import "./features/mirrorverse/Tubulator"
+//Stillgore Chateau
+import "./features/StillgoreChateau/SplatterHeartsESP"
 
 register("command", () => Settings.openGUI()).setName("rift")
