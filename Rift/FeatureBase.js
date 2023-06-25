@@ -22,8 +22,6 @@ export default class FeaturesBase {
 
             this.currentWorld = Scoreboard?.getLines()?.find(f => f.getName().removeFormatting().match(/ ф (.+)/))?.getName()?.removeFormatting()?.replace(/[^\u0000-\u007F]/g, "")
 
-            if(!this.currentWorld || this.currentWorld === null) return
-
             registeredEvents.forEach(values => {
                 const bool = config[values]
 

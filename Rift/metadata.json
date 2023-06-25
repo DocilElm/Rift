@@ -2,7 +2,7 @@
   "name": "Rift",
   "creator": "DocilElm",
   "description": "idk",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "entry": "index.js",
   "requires": [ 
     "RenderLib",
