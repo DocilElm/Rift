@@ -11,6 +11,6 @@ import "./features/dreadfarm/GlyphLocations"
 import "./features/mirrorverse/LavaMaze"
 import "./features/mirrorverse/Tubulator"
 //Stillgore Chateau
-import "./features/StillgoreChateau/SplatterHeartsESP"
+import "./features/stillgorechateau/SplatterHeartsESP"
 
 register("command", () => Settings.openGUI()).setName("rift")
